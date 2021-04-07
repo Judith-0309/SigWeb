@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+#Create your models here.
 
 
 class User(models.Model):
@@ -8,3 +8,4 @@ class User(models.Model):
     prenom = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     motdepass = models.CharField(max_length=100,default=True)
+    objects = models.Manager()

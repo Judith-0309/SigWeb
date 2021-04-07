@@ -3,7 +3,8 @@ from api.compte import views
 
 
 urlpatterns =[
-    path('compteinfo/<int:pk>', views.compte_detail),
-    path('compteinfo/', views.compte_list),
+    path('compte/compteinfo/<int:pk>', views.compte_detail),
+    path('compte/compteinfo/', views.compte_list),
+    path('compte/comptecreate/', views.create)
 
 ]

@@ -4,5 +4,6 @@ from django.db import models
 
 
 class Compte(models.Model):
-        datecreation = models.DateTimeField(auto_now_add=True)
+        datecreation = models.DateTimeField()
         numerocompte = models.IntegerField()
+        objects = models.Manager()

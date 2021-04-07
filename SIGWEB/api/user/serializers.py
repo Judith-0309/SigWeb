@@ -1,5 +1,5 @@
 from rest_framework import serializers
-# from .models import User
+from .models import User
 
 
 class UserSerializer(serializers.Serializer):
@@ -9,6 +9,11 @@ class UserSerializer(serializers.Serializer):
     email = serializers.EmailField(max_length=100)
     motdepass = serializers.CharField(max_length=100,default=True)
 
+    class Meta:
+        fields = '__all__'
+
+    def create(self, validated_data):
+        return User.objects.create(**validated_data)
 
 # class UserForm(forms.Form):
 #     nom = forms.CharField(max_length=100)
