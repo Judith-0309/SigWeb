@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Role, CHOICES
+from .models import Role
 
 
 

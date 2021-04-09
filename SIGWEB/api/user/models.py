@@ -16,7 +16,7 @@ class User(models.Model):
 
 
     def __str__(self):
-        return "%s the user" % self.nom
+        return "%s" % self.nom
 
     class Meta:
         ordering = ['nom']

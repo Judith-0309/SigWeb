@@ -8,5 +8,6 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     url(r'^', include('api.user.urls')),
     url(r'^', include('api.compte.urls')),
-    url(r'^', include('api.roles.urls'))
+    url(r'^', include('api.roles.urls')),
+    url(r'^', include('api.donnees.urls'))
 ]
