@@ -15,9 +15,3 @@ class UserSerializer(serializers.Serializer):
     def create(self, validated_data):
         return User.objects.create(**validated_data)
 
-# class UserForm(forms.Form):
-#     nom = forms.CharField(max_length=100)
-#     prenom = forms.CharField(max_length=100)
-#     email = forms.EmailField(max_length=100)
-#     motdepass = forms.CharField(max_length=100,default=True)
-

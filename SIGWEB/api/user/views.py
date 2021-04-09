@@ -9,24 +9,6 @@ from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 
 
-
-
-# @csrf_exempt
-# # @api_view(['POST'])
-# def user_create(request):
-#     try:
-#         if request.method == 'POST':
-#             article_data = JSONParser().parse(request)
-#             article_serializer = UserSerializer(data=article_data)
-#             if article_serializer.is_valid():
-#                 article_serializer.save()
-#                 return HttpResponse(article_serializer.data, status=status.HTTP_201_CREATED)
-#             return HttpResponse({'message': "error during save"}, status=status.HTTP_400_BAD_REQUEST)
-#         else:
-#             print("fi")
-#     except:
-#         print(article_serializer.errors)
-
 @csrf_exempt
 @api_view(['POST'])
 def user_create(request):
