@@ -4,7 +4,6 @@ from api.donnees.models import Donnees
 
 
 class DonneesSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
     type = serializers.CharField(max_length=100)
 
     def donnees_create(self, validated_data):

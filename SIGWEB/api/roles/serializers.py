@@ -4,7 +4,6 @@ from .models import Role
 
 
 class RoleSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
     roles = serializers.CharField(max_length=100)
 
     def create(self, validated_data):
