@@ -1,9 +1,11 @@
 from rest_framework import serializers
-from django.db import models
 from .models import Polygone
+from django.db import models
+from django.contrib.gis.db import models as gis_models
 
 
 class PolygoneSerializer(serializers.Serializer):
+    location = gis_models.PointField(srid=4326,blank=True, null=True)
     nom = serializers.CharField(max_length=100)
     type = serializers.CharField(max_length=100)
     superficie = serializers.IntegerField()

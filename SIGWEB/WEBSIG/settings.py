@@ -31,15 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework_gis',
+    'rest_framework',
+    'django.contrib.gis',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'api',
     'snippets.apps.SnippetsConfig',
+
+
 
 ]
 
@@ -77,16 +81,30 @@ WSGI_APPLICATION = 'WEBSIG.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'GeoDjango',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'SigWeb',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'gis',
+        'USER': 'postgres',
+        'PASSWORD': 'postgrespassword',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
+GEOS_LIBRARY_PATH = '/usr/lib/x86_64-linux-gnu/libgeos_c.so'
+# GDAL_LIBRARY_PATH = '/opt/bitnami/postgresql/lib/libgdal.so'
+GDAL_DATA = '/opt/bitnami/postgresql/share/gdal'
+GDAL_LIBRARY_PATH = '/usr/lib/libgdal.so'
 
 
 
@@ -137,7 +155,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#
+# import pymysql
+#
+# pymysql.install_as_MySQLdb()
 
 import pymysql
-
+pymysql.version_info = (1, 4, 6, "final", 0)
 pymysql.install_as_MySQLdb()
