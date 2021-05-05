@@ -6,7 +6,7 @@ from django.db import models
 
 
 
-class Points(Donnees):
+class Point(Donnees):
     location = gis_models.PointField(srid=4326, blank=True, null=True)
     nom = models.CharField(max_length=100)
     type = models.CharField(max_length=100)
@@ -16,5 +16,5 @@ class Points(Donnees):
     pass
 
     class Meta(Donnees.Meta):
-        db_table = 'points'
+        db_table = 'point'
 

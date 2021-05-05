@@ -5,7 +5,7 @@ from .roles.models import Role
 from .donnees_raster.models import DonneesRaster
 from .donnees.models import Donnees
 from .ligne.models import Ligne
-from .points.models import Points
+from .point.models import Point
 from .polygone.models import Polygone
 
 
@@ -14,7 +14,7 @@ Compte
 Role
 Donnees
 Ligne
-Points
+Point
 Polygone
 DonneesRaster
 

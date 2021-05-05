@@ -5,7 +5,7 @@ from .donnees_raster.models import DonneesRaster
 from .ligne.models import Ligne
 from .models import User
 from .models import Role
-from .points.models import Points
+from .point.models import Point
 from .polygone.models import Polygone
 
 from django.contrib.gis import admin
@@ -16,7 +16,7 @@ admin.site.register(Role)
 admin.site.register(DonneesRaster)
 admin.site.register(Ligne)
 admin.site.register(Polygone)
-admin.site.register(Points)
+admin.site.register(Point)
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):

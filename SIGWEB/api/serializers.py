@@ -4,7 +4,7 @@ from .compte.serializers import CompteSerializer
 from .roles.serializers import RoleSerializer
 from .donnees.serializers import DonneesSerializer
 from .donnees_raster.serializers import DonneesRasterSerializer
-from .points.serializers import PointsSerializer
+from .point.serializers import PointSerializer
 from .polygone.serializers import PolygoneSerializer
 from .ligne.serializers import LigneSerializer
 
@@ -13,7 +13,7 @@ CompteSerializer
 RoleSerializer
 DonneesSerializer
 PolygoneSerializer
-PointsSerializer
+PointSerializer
 LigneSerializer
 DonneesRasterSerializer
 

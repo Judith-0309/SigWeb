@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^', include('api.compte.urls')),
     url(r'^', include('api.roles.urls')),
     url(r'^', include('api.donnees.urls')),
-    url(r'^', include('api.points.urls')),
+    url(r'^', include('api.point.urls')),
     url(r'^', include('api.ligne.urls')),
     url(r'^', include('api.polygone.urls')),
     url(r'^', include('api.donnees_raster.urls')),
